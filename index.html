@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mini CRM</title>
+<title>Advanced Mini CRM</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-    <h1>Client Lead Management System</h1>
 
-    <input type="text" id="name" placeholder="Client Name">
-    <input type="email" id="email" placeholder="Email">
-    <input type="text" id="phone" placeholder="Phone Number">
+<h1>Client Lead Management System</h1>
 
-    <button onclick="addLead()">Add Lead</button>
+<div class="stats">
+<h3>Total Leads: <span id="count">0</span></h3>
+</div>
 
-    <ul id="leadList"></ul>
+<input type="text" id="search" placeholder="Search Lead..." onkeyup="searchLead()">
+
+<input type="text" id="name" placeholder="Client Name">
+<input type="email" id="email" placeholder="Email">
+<input type="text" id="phone" placeholder="Phone">
+
+<select id="status">
+<option>New</option>
+<option>Contacted</option>
+<option>Closed</option>
+</select>
+
+<button onclick="addLead()">Add Lead</button>
+
+<div id="leadList"></div>
+
 </div>
 
 <script src="script.js"></script>
